@@ -1,6 +1,6 @@
-import React from "react";
-import SummaryForm from "./SummaryForm";
-import { useOrderDetails } from "../../contexts/OrderDetails";
+import React from 'react';
+import SummaryForm from './SummaryForm';
+import { useOrderDetails } from '../../contexts/OrderDetails';
 
 export default function OrderSummary({ setOrderPhase }) {
   const [orderDetails] = useOrderDetails();
@@ -17,7 +17,7 @@ export default function OrderSummary({ setOrderPhase }) {
 
   if (hasToppings) {
     const toppingsArray = Array.from(orderDetails.toppings.keys());
-    const toppingList = toppingsArray.map(key => <li key={key}>{key}</li>);
+    const toppingList = toppingsArray.map((key) => <li key={key}>{key}</li>);
     toppingsDisplay = (
       <>
         <h2>Toppings: {orderDetails.totals.toppings}</h2>
